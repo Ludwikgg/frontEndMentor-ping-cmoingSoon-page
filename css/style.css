@@ -19,12 +19,12 @@ body {
     font-family: 'Libre Franklin', sans-serif;
     overflow: hidden;
     height: 95vh;
-    min-height: -webkit-fill-available;
 }
 
 .wrapper {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     height: 100%;
     width: 100%;
@@ -155,10 +155,6 @@ body {
     text-decoration: none;
 }
 
-
-/* - Mobile: 375px
-- Desktop: 1440px */
-
 @media (min-width: 400px) {
 
     .header-content .main-txt {
@@ -188,14 +184,12 @@ body {
     }
 }
 
-/* TODO: MEDIA QUERYS: 
- // Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-*/
 @media (min-width: 992px) {
+
+    body {
+        height: 100vh;
+    }
+
     .header-content {
         margin: 5% 0 3% 0;
     }
@@ -266,7 +260,6 @@ body {
 }
 
 @media (min-width: 1600px) {
-
 
     .main-img img {
         width: 600px;
