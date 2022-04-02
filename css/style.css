@@ -18,13 +18,15 @@ body {
     font-size: 20px;
     font-family: 'Libre Franklin', sans-serif;
     overflow: hidden;
+    height: 95vh;
+    min-height: -webkit-fill-available;
 }
 
 .wrapper {
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     width: 100%;
 }
 
