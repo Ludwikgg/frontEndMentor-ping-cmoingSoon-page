@@ -59,10 +59,12 @@ body {
 }
 
 .header-content .sub-txt {
+    position: relative;
     font-size: 12px;
 }
 
 .main-content {
+    position: relative;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -98,20 +100,27 @@ body {
     font-size: 15px;
     line-height: 5%;
     cursor: pointer;
+    vertical-align: middle;
 }
 
 .main-content .main-img {
-    position: relative;
+    margin: 10% 0;
+    top: 30%;
+    left: 50%;
+    position: absolute;
     height: 20%;
+    transform: translateX(-50%);
 }
 
 .main-img img {
-    position: absolute;
-    margin-top: 10%;
-    top: 55%;
     width: 300px;
-    left: 50%;
-    transform: translateX(-50%);
+}
+
+.main-content .err-txt {
+    display: none;
+    margin: 2% 10%;
+    color: red;
+    font-size: 10px;
 }
 
 .footer {
@@ -119,7 +128,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 10%;
+    margin: 10% 0 5%;
 }
 
 .footer .social-icons {
@@ -135,6 +144,12 @@ body {
     margin: 0 5px;
     width: 35px;
     text-align: center;
+    transition: 0.5s;
+}
+
+.footer .social-icons i:hover {
+    color: white;
+    background-color: var(--blue);
 }
 
 .footer .footer-txt {
@@ -222,10 +237,31 @@ body {
         margin-bottom: 3%;
     }
 
-    .main-img img {
-        top: 50%;
-        width: 500px;
+    .main-content .main-img {
+        margin: 0;
+        top: 20%;
         left: 50%;
+        position: relative;
+        height: 0;
+        transform: translateX(-60%);
+    }
+
+    .main-img img {
+        width: 500px;
+    }
+
+    .main-content .err-txt {
+        position: absolute;
+        top: 25%;
+        display: none;
+        margin: 2% 10%;
+        color: red;
+        font-size: 13px;
+        left: -5%;
+    }
+
+    .footer {
+        margin: 10% 0 0;
     }
 
     .footer .social-icons {
@@ -249,6 +285,7 @@ body {
     }
 
     .main-input .notify-btn {
+        margin-top: 2.5%;
         width: 180px;
     }
 
@@ -261,12 +298,9 @@ body {
 
 @media (min-width: 1600px) {
 
-    .main-img img {
-        width: 600px;
-    }
-
     .footer .social-icons i {
         font-size: 25px;
+        width: 45px;
     }
 
     .footer .footer-txt {
